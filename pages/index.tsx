@@ -69,5 +69,5 @@ export default function Home() {
         console.log('==== end log ===')
       })
   }, [])
-  return <div>hello</div>
+  return <div>Login with github</div>
 }

@@ -2,6 +2,6 @@
 
 exports[`Index page should match the snapshot 1`] = `
 <div>
-  hello
+  Login with github
 </div>
 `;
