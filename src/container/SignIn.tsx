@@ -1,0 +1,56 @@
+import firebase from 'firebase/app'
+
+// Optionally import the services that you want to use
+import 'firebase/auth'
+import 'firebase/database'
+import 'firebase/firestore'
+import 'firebase/functions'
+import 'firebase/storage'
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: 'AIzaSyDuX7_Tqtp-CPnmOgpWtQXE-T0zwX8YTeM',
+  authDomain: 'hiddenchessgame.firebaseapp.com',
+  databaseURL: 'https://hiddenchessgame.firebaseio.com',
+  projectId: 'hiddenchessgame',
+  storageBucket: 'hiddenchessgame.appspot.com',
+  messagingSenderId: '1040915402329',
+  appId: '1:1040915402329:web:493ebe219a5fc4bb166b48',
+}
+if (!firebase.apps.length) {
+  firebase
+    .initializeApp(firebaseConfig)
+    .auth()
+    .onAuthStateChanged((user) => {
+      if (user != null) {
+        console.log('We are authenticated now!')
+      }
+
+      // Do other things
+    })
+} else {
+  firebase.app() // if already initialized, use that one
+}
+
+// function storeHighScore(userId, score) {
+//   firebase
+//     .database()
+//     .ref('users/' + userId)
+//     .set({
+//       highscore: score,
+//     })
+// }
+
+// function setupHighscoreListener(userId) {
+//   firebase
+//     .database()
+//     .ref('users/' + userId)
+//     .on('value', (snapshot) => {
+//       const highscore = snapshot.val().highscore
+//       console.log('New high score: ' + highscore)
+//     })
+// }
+const SignIn: React.FC = () => {
+  return <div>Login with github</div>
+}
+export default SignIn
