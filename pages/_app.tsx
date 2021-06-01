@@ -1,3 +1,4 @@
+import 'setimmediate'
 import { AppProps } from 'next/app'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
