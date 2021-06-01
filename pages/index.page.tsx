@@ -51,7 +51,8 @@ if (!firebase.apps.length) {
 //       console.log('New high score: ' + highscore)
 //     })
 // }
-export default function Home() {
+
+const Home: React.FC = () => {
   useEffect(() => {
     firebase
       .auth()
@@ -71,3 +72,4 @@ export default function Home() {
   }, [])
   return <div>Login with github</div>
 }
+export default Home
