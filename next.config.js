@@ -6,4 +6,5 @@ module.exports = {
     config.plugins.push(new webpack.IgnorePlugin({ resourceRegExp: /\/.spec.\// }))
     return config
   },
+  pageExtensions: ['page.tsx'],
 }
