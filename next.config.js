@@ -1,10 +1,6 @@
-module.exports = {
-  future: {
-    webpack5: true,
-  },
-  //   webpack: (config, { webpack }) => {
-  //     config.plugins.push(new webpack.IgnorePlugin({ resourceRegExp: /\/.spec.\// }))
-  //     return config
-  //   },
+const { withExpo } = require('@expo/next-adapter')
+
+module.exports = withExpo({
+  projectRoot: __dirname,
   pageExtensions: ['page.tsx'],
-}
+})
