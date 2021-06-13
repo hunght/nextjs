@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { Link } from 'expo-next-react-navigation'
 import BaseButton from '../component/BaseButton'
-import { loginWithGithub } from '../../pages/api/fire'
+import { loginWithGithub } from '../api/github'
 
 export const Home: React.FC = () => {
   return (
