@@ -6,6 +6,7 @@ import 'firebase/database'
 import 'firebase/firestore'
 import 'firebase/functions'
 import 'firebase/storage'
+import { useEffect } from 'react'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -50,7 +51,25 @@ if (!firebase.apps.length) {
 //       console.log('New high score: ' + highscore)
 //     })
 // }
-const SignIn: React.FC = () => {
+
+const Home: React.FC = () => {
+  useEffect(() => {
+    firebase
+      .auth()
+      .signInAnonymously()
+      .then(({ user }) => {
+        // Signed in..
+        console.log(`==== user ===`)
+        console.log(user.uid)
+        console.log('==== end log ===')
+      })
+      .catch((error) => {
+        // ...
+        console.log(`==== error ===`)
+        console.log(error)
+        console.log('==== end log ===')
+      })
+  }, [])
   return <div>Login with github</div>
 }
-export default SignIn
+export default Home
