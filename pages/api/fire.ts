@@ -13,8 +13,9 @@ const firebaseConfig = {
   projectId: 'brilliant-heat-3772',
   storageBucket: 'brilliant-heat-3772.appspot.com',
   messagingSenderId: '120746288916',
-  appId: '1:120746288916:web:660364cdffc4de45638401',
+  appId: '1:120746288916:web:37a36e957ec4de07638401',
 }
+
 const fire = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app()
 
 export const loginWithGithub = (): Promise<firebase.auth.UserCredential> => {
